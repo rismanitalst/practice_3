@@ -31,12 +31,7 @@ class AsistenDosen extends Mahasiswa {
     required String jurusan,
     required int angkatan,
     required this.mataKuliah,
-  }) : super(
-          nama: nama,
-          nim: nim,
-          jurusan: jurusan,
-          angkatan: angkatan,
-        );
+  }) : super(nama: nama, nim: nim, jurusan: jurusan, angkatan: angkatan);
 
   // Override method
   @override
@@ -58,12 +53,7 @@ class MahasiswaAktif extends Mahasiswa implements Pendaftaran {
     required String nim,
     required String jurusan,
     required int angkatan,
-  }) : super(
-          nama: nama,
-          nim: nim,
-          jurusan: jurusan,
-          angkatan: angkatan,
-        );
+  }) : super(nama: nama, nim: nim, jurusan: jurusan, angkatan: angkatan);
 
   @override
   void daftarMatkul(String matkul) {
@@ -75,10 +65,10 @@ class MahasiswaAktif extends Mahasiswa implements Pendaftaran {
 void main() {
   // Buat object mahasiswa biasa
   var mhs1 = Mahasiswa(
-    nama: "Budi Santoso",
+    nama: "Rismanita Lestari",
     nim: "123456",
     jurusan: "Informatika",
-    angkatan: 2022,
+    angkatan: 2023,
   );
   mhs1.tampilkanData();
 
@@ -86,7 +76,7 @@ void main() {
 
   // Buat object asisten dosen
   var asdos = AsistenDosen(
-    nama: "Siti Aminah",
+    nama: "Jake Sim",
     nim: "654321",
     jurusan: "Sistem Informasi",
     angkatan: 2021,
@@ -98,7 +88,7 @@ void main() {
 
   // Mahasiswa aktif implementasi interface
   var mhs2 = MahasiswaAktif(
-    nama: "Andi Wijaya",
+    nama: "Edward Martin",
     nim: "112233",
     jurusan: "Teknik Elektro",
     angkatan: 2023,
